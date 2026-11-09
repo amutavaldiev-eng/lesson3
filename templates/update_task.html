@@ -1,0 +1,30 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Update Task</title>
+    <link rel="stylesheet" href="{% static 'update_task.css' %}">
+</head>
+<body>
+
+    <div class="box">
+
+        <h1>Update Task</h1>
+
+        <form method="POST">
+            {% csrf_token %}
+            <label>Title</label>
+            <input type="text" name="title" value="{{task.title}}">
+
+            <label>Caption</label>
+            <textarea name="caption">{{task.caption}}</textarea>
+
+            <label>Due Date</label>
+            <input type="date" name="due_date" value="{{task.due_date}}">
+            <button type="submit">Save Changes</button>
+
+        </form>
+    </div>
+</body>
+</html>

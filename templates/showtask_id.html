@@ -1,0 +1,22 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Task</title>
+    <link rel="stylesheet" href="{% static 'showtask_id.css' %}">
+</head>
+<body>
+
+    <div class="div1">
+        <h1>Title: {{tasks.title}}</h1>
+        <h1>Caption: {{tasks.caption}}</h1>
+        <h1>Due Date: {{tasks.due_date}}</h1>
+        <button><a href="http://127.0.0.1:8000/update/{{tasks.id}}/">Update</a></button>
+        <button><a href="http://127.0.0.1:8000/delete/{{tasks.id}}/">Delete</a></button>
+    </div>
+
+</body>
+</html>
